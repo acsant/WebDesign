@@ -37,7 +37,7 @@ a:hover {
 
 /* Grid */
 .grid__item {
-	height: calc(100vh - 55px);
+	height: calc(100vh - 15.5%);
 	min-height: 460px;
 	max-width: 100%;
 	background: #DDD;
