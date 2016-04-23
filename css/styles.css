@@ -5,7 +5,7 @@
 .clearfix:after { clear: both; }*
 
 body {
-	background: #fff;
+	background: #DDDDDD;
 	color: #1e1a1b;
 	font-weight: 500;
 	font-size: 1em;
@@ -37,7 +37,7 @@ a:hover {
 
 /* Grid */
 .grid__item {
-	height: calc(100vh - 15.5%);
+	height: calc(100vh - 5%);
 	min-height: 460px;
 	max-width: 100%;
 	background: #DDD;

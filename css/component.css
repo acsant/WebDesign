@@ -1,7 +1,14 @@
 /* Common styles for all menus */
+.menubar {
+	position: absolute;
+	right: 0px;
+	z-index: 1;
+}
+
 .menu {
 	line-height: 1;
 	margin: 0 auto 3em;
+	float: right;
 }
 
 .menu__list {
@@ -62,7 +69,7 @@
 }
 
 .menu--horatio .menu__item:hover {
-	color: #d94f5c;
+	color: #E53369;
 }
 
 .menu--horatio .menu__item::before,
