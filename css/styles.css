@@ -14,18 +14,39 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+header {
+	position: relative;
+  	height: 100vh;
+  	width: 100%;
+  	background: #5cbc9d;
+  	overflow: hidden;
+}
+
 a {
 	outline: none;
-	color: #dd3e62;
+	color: #FFF;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #1e1a1b;
+	color: #FFF;
 }
 
  a:focus {
  	outline: none;
+ }
+
+ .container {
+ 	display: table;
+ 	position: absolute;
+ 	height: 100%;
+ 	width: 100%;
+
+ }
+
+ .home {
+ 	display: table-cell;
+ 	vertical-align: middle;
  }
 
 .hidden {
@@ -33,6 +54,15 @@ a:hover {
 	width: 0;
 	overflow: hidden;
 	position: absolute;
+}
+
+.subtitle {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	position: absolute;
+	bottom: 60px;
+	height: 44px;
 }
 
 /* Grid */
@@ -58,14 +88,98 @@ a:hover {
 	color: #777;
 }
 
-ul {
+/*ul {
 	background-color: #dddddd;
 }
 
 li {
 	display: inline;
 	float: left;
+}*/
+
+.button {
+  border-radius: 4px;
+  background-color: #A08D7D;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.row {
+	position: absolute;
+	display: table;
+	bottom: 200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+ul.social-buttons li a {
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.list-inline {
+	list-style-type: none;
+	position: absolute;
+    bottom: 200px;
+    display: inherit;
+    padding: 20px;
+}
+
+.fa-envelope-square:hover,
+.fa-envelope-square:active,
+.fa-envelope-square:focus {
+	color: #000000;
+}
+
+.fa-github-square:hover,
+.fa-github-square:active,
+.fa-github-square:focus {
+	color: #282a33;
+}
+
+.fa-linkedin-square:hover,
+.fa-linkedin-square:active,
+.fa-linkedin-square:focus {
+	color: #1D87BD;
+}
+
 
 /* Background colors */
 .color-1 { background: #E8E0DA; }

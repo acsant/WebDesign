@@ -7,48 +7,45 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="css/linkstyles.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   </head>
   <body>
     <div class="container">
-      <div class="menubar">
-        <section class="section section-menu">
-          <nav class="menu menu--horatio">
-            <ul class="menu__list">
-              <li class="menu__item menu__item--current"><a class="menu__link"><span> Home </span></a></li>
-              <li class="menu__item"><a class="menu__link"><span> About </span></a></li>
-              <li class="menu__item"><a class="menu__link"><span> Projects </span></a></li>
-              <li class="menu__item"><a class="menu__link"><span> Resume </span></a></li>
-            </ul>
-          </nav>
-        </section>
-      </div>
-      <div class="grid__item">
+      <header id="home" class="grid__item cbp-af-header">
         <a class="link link--name" href="#"> < Akash Sant > <span>
-          Software Engineer from Toronto!
+          Software Engineer - University of Waterloo!
          </span></a>
-      </div>
+         <div class="subtitle"><button class="button"><span><a href="resume.pdf" target="_blank" data-menu="link">RESUME</a></span></button></div>
+          <ul class="list-inline social-buttons">
+            <li class="social-button-mail">
+              <a href="mailto:acsant@uwaterloo.ca?subject=Hey Akash!"><i class="fa fa-envelope-square fa-4x"></i>
+               </a>
+            </li>
+            <li class="social-button-linkedin">
+              <a href="https://www.linkedin.com/in/acsant"><i class="fa fa-linkedin-square fa-4x"></i>
+              </a>
+            </li>
+            <li class="social-button-github">
+              <a href="https://github.com/acsant"><i class="fa fa-github-square fa-4x"></i>
+              </a>
+            </li>
+          
+          </ul>
+        
+      </header>
     </div>
     <script src="js/classie.js"></script>
     <script src="js/clipboard.min.js"></script>
+    <script src="js/dots.js"></script>
+    <script src="js/cbpAnimatedHeader.min.js"></script>
     <script>
-      (function() {
-        [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
-          var menuItems = menu.querySelectorAll('.menu__link'),
-            setCurrent = function (ev) {
-              ev.preventDefault();
-              var item = ev.target.parentNode;
-              if (classie.has(item, 'menu__item--current')) {
-                return false;
-              }
-              classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-              classie.add(item, 'menu__item--current');
-            };
-          [].slice.call(menuItems).forEach(function (el) {
-            el.addEventListener('click', setCurrent);
-          });
-        });
-
-      })(window);
+      [].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
+        new DotNav( nav, {
+          callback : function( idx ) {
+            console.log( idx )
+          }
+        } );
+      } );
     </script>
   </body>
 </html>
