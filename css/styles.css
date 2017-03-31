@@ -157,7 +157,7 @@ ul.social-buttons li a {
 .list-inline {
 	list-style-type: none;
 	position: absolute;
-    bottom: 200px;
+    bottom: 150px;
     display: inherit;
     padding: 20px;
 }
