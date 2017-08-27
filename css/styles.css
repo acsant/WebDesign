@@ -41,6 +41,9 @@ a:hover {
  	position: absolute;
  	height: 100%;
  	width: 100%;
+ 	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 
  }
 
@@ -114,7 +117,7 @@ a:hover {
   position: absolute;
   opacity: 0;
   top: 0;
-  right: -20px;
+  /*right: -20px;*/
   transition: 0.5s;
 }
 
@@ -125,6 +128,11 @@ a:hover {
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.home {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .row {
